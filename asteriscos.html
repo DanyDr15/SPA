@@ -1,0 +1,55 @@
+<!Doctype html>
+<html>
+
+<head>
+	
+	<title>Ejercicio 2 de figuras</title>
+
+</head>
+
+<link rel="stylesheet" type="text/css" href="css/grafi.css">
+<body class="estilos">
+	
+	<br>
+	<form action = "">
+	
+		<b>Ingrese un numero:</b> <input type="text" id="n2" time="5s" onchange="grafico()">
+		<br>
+		<br>
+	</form >
+			
+			<script type="text/javascript" id="eje">
+
+				function grafico(){
+				var n = parseInt(document.getElementById('n2').value);
+				if(n%2==0){
+					alert("Ingrese un numero impar")
+				}
+				else{
+				var c=n/2;
+				var c1=Math.round(c);
+				var c2 = c1-1;
+				
+				
+					for (var x=0; x<c2; x++) {
+						for (var y = 0; y <=x; y++) {
+							document.write("*");
+						}
+							document.write("<br>");
+					}
+
+
+					for(var x=0;x<c1;x++){
+						for(var t=0;t<x;t++){
+							document.write("&nbsp&nbsp");
+						}
+							for(var t=c1-x-1;t>=0;t--){
+								document.write("*");
+							}
+							document.write("<br>");
+					}
+					}
+		}
+    </script>
+</body>
+</html>
