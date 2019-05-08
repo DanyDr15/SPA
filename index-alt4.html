@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>BLOG</title>
+  <title>Eterna - Professional bootstrap site template for corporate business</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Your page description here" />
   <meta name="author" content="" />
@@ -16,6 +16,7 @@
   <link href="css/prettyPhoto.css" rel="stylesheet" />
   <link href="css/camera.css" rel="stylesheet" />
   <link href="css/jquery.bxslider.css" rel="stylesheet" />
+  <link href="css/cslider.css" rel="stylesheet" />
   <link href="css/style.css" rel="stylesheet" />
 
   <!-- Theme skin -->
@@ -40,13 +41,14 @@
 
   <div id="wrapper">
 
+
     <!-- start header -->
     <header>
       <div class="top">
         <div class="container">
           <div class="row">
             <div class="span6">
-              <p class="topcontact"><i class="icon-phone"></i> +593 981283047</p>
+              <p class="topcontact"><i class="icon-phone"></i> +62 088 999 123</p>
             </div>
             <div class="span6">
 
@@ -69,7 +71,7 @@
         <div class="row nomargin">
           <div class="span4">
             <div class="logo">
-              <a href="index.html"><img src="img/BLOG.jpg" alt="" /></a>
+              <a href="index.html"><img src="img/logo.png" alt="" /></a>
             </div>
           </div>
           <div class="span8">
@@ -148,75 +150,36 @@
     <!-- section featured -->
     <section id="featured">
 
-      <!-- slideshow start here -->
-
-      <div class="camera_wrap" id="camera-slide">
-
-        <!-- slide 1 here -->
-        <div data-src="img/slides/camera/slide1/tecnologias.jpg">
-          <div class="camera_caption fadeFromLeft">
-            <div class="container">
-              <div class="row">
-                <div class="span6">
-                  <h2 class="animated fadeInDown"><strong>Great template for <span class="colored">multi usage</span></strong></h2>
-                  <p class="animated fadeInUp"> Vim porro dicam reprehendunt te, populo quodsi dissentiet cum ad. Ne natum deseruisse vis. Iisque deseruisse sententiae mel ne, dolores appetere vim ut. Sea no tamquam reprimique.</p>
-                  <a href="#" class="btn btn-success btn-large animated fadeInUp">
-											<i class="icon-link"></i> Read more
-										</a>
-                  <a href="#" class="btn btn-theme btn-large animated fadeInUp">
-											<i class="icon-download"></i> Download
-										</a>
-                </div>
-                <div class="span6">
-                  <img src="img/slides/camera/slide1/screen.png" alt="" class="animated bounceInDown delay1" />
-                </div>
-              </div>
+      <!-- start slider -->
+      <div id="da-slider" class="da-slider">
+        <div class="da-slide">
+          <h2>Easy management</h2>
+          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+          <a href="#" class="btn btn-theme btn-large da-link">Read more</a>
+          <div class="da-img"><img src="img/slides/parallax/1.png" alt="" /></div>
+        </div>
+        <div class="da-slide">
+          <h2>Embed your video</h2>
+          <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+          <a href="#" class="btn btn-primary btn-large da-link">Read more</a>
+          <div class="da-img">
+            <div class="video-container">
+              <iframe src="http://player.vimeo.com/video/30585464?title=0&amp;byline=0">			</iframe>
             </div>
           </div>
         </div>
-
-        <!-- slide 2 here -->
-        <div data-src="img/slides/camera/slide2/img1.jpg">
-          <div class="camera_caption fadeFromLeft">
-            <div class="container">
-              <div class="row">
-                <div class="span6">
-                  <img src="img/slides/camera/slide2/iMac.png" alt="" />
-                </div>
-                <div class="span6">
-                  <h2 class="animated fadeInDown"><strong>Put your <span class="colored">Opt in form</span></strong></h2>
-                  <p class="animated fadeInUp"> Vim porro dicam reprehendunt te, populo quodsi dissentiet cum ad. Ne natum deseruisse vis. Iisque deseruisse sententiae mel ne, dolores appetere vim ut. Sea no tamquam reprimique.</p>
-                  <form>
-                    <div class="input-append">
-                      <input class="span3 input-large" type="text">
-                      <button class="btn btn-theme btn-large" type="submit">Subscribe</button>
-                    </div>
-                  </form>
-                </div>
-
-              </div>
-            </div>
-          </div>
+        <div class="da-slide">
+          <h2>Great for any websites</h2>
+          <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+          <a href="#" class="btn btn-success btn-large da-link">Read more</a>
+          <div class="da-img"><img src="img/slides/parallax/2.png" alt="" /></div>
         </div>
-
-        <!-- slide 3 here -->
-        <div data-src="img/slides/camera/slide2/img1.jpg">
-          <div class="camera_caption fadeFromLeft">
-            <div class="container">
-              <div class="row">
-                <div class="span12 aligncenter">
-                  <h2 class="animated fadeInDown"><strong><span class="colored">Responsive</span> and <span class="colored">cross broswer</span> compatibility</strong></h2>
-                  <p class="animated fadeInUp">Pellentesque habitant morbi tristique senectus et netus et malesuada</p>
-                  <img src="img/slides/camera/slide3/browsers.png" alt="" class="animated bounceInDown delay1" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
+        <nav class="da-arrows">
+          <span class="da-arrows-prev"></span>
+          <span class="da-arrows-next"></span>
+        </nav>
       </div>
-
-      <!-- slideshow end here -->
+      <!-- end slider -->
 
     </section>
     <!-- /section featured -->
@@ -224,14 +187,34 @@
     <section id="content">
       <div class="container">
 
+        <div class="row">
+          <div class="span12">
+            <div class="cta-box">
+              <div class="row">
+                <div class="span8">
+                  <div class="cta-text">
+                    <h2>Special price in very <span>limited</span> times</h2>
+                  </div>
+                </div>
+                <div class="span4">
+                  <div class="cta-btn">
+                    <a href="#" class="btn btn-theme">Get a quote <i class="icon-angle-right"></i></a>
+                  </div>
+                </div>
 
+              </div>
+
+
+            </div>
+          </div>
+        </div>
         <div class="row">
           <div class="span12">
             <div class="row">
               <div class="span4">
                 <div class="box flyLeft">
                   <div class="icon">
-                    <i class="ico icon-circled icon-bgdark icon-star active icon-3x"></i>
+                    <i class="ico icon-circled icon-bgdark icon-star icon-3x"></i>
                   </div>
                   <div class="text">
                     <h4>High <strong>Quality</strong></h4>
@@ -246,7 +229,7 @@
               <div class="span4">
                 <div class="box flyIn">
                   <div class="icon">
-                    <i class="ico icon-circled icon-bgdark icon-dropbox active icon-3x"></i>
+                    <i class="ico icon-circled icon-bglight icon-dropbox icon-3x"></i>
                   </div>
                   <div class="text">
                     <h4>Rich of <strong>Features</strong></h4>
@@ -264,6 +247,53 @@
                   </div>
                   <div class="text">
                     <h4>Modern <strong>Design</strong></h4>
+                    <p>
+                      Lorem ipsum dolor sit amet, has ei ipsum scaevola deseruisse am sea facilisis.
+                    </p>
+                    <a href="#">Learn More</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="row">
+              <div class="span4">
+                <div class="box flyLeft">
+                  <div class="icon">
+                    <i class="ico icon-circled icon-bgprimary icon-code icon-3x"></i>
+                  </div>
+                  <div class="text">
+                    <h4>Valid <strong>Code</strong></h4>
+                    <p>
+                      Lorem ipsum dolor sit amet, has ei ipsum scaevola deseruisse am sea facilisis.
+                    </p>
+                    <a href="#">Learn More</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="span4">
+                <div class="box flyIn">
+                  <div class="icon">
+                    <i class="ico icon-circled icon-bgdanger icon-cut icon-3x"></i>
+                  </div>
+                  <div class="text">
+                    <h4>Special <strong>Price</strong></h4>
+                    <p>
+                      Lorem ipsum dolor sit amet, has ei ipsum scaevola deseruisse am sea facilisis.
+                    </p>
+                    <a href="#">Learn More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="span4">
+                <div class="box flyRight">
+                  <div class="icon">
+                    <i class="ico icon-circled icon-bgsuccess icon-user icon-3x"></i>
+                  </div>
+                  <div class="text">
+                    <h4>Free <strong>Support</strong></h4>
                     <p>
                       Lorem ipsum dolor sit amet, has ei ipsum scaevola deseruisse am sea facilisis.
                     </p>
@@ -335,97 +365,13 @@
                 </div>
               </li>
             </ul>
-
+            <div class="blankline30"></div>
           </div>
         </div>
 
       </div>
     </section>
 
-
-    <section id="works">
-      <div class="container">
-        <div class="row">
-          <div class="span12">
-            <h4 class="title">Recent <strong>Works</strong></h4>
-            <div class="row">
-
-              <div class="grid cs-style-4">
-                <div class="span3">
-                  <div class="item">
-                    <figure>
-                      <div><img src="img/dummies/works/1.jpg" alt="" /></div>
-                      <figcaption>
-                        <div>
-                          <span>
-								<a href="img/dummies/works/big.png" data-pretty="prettyPhoto[gallery1]" title="Portfolio caption here"><i class="icon-plus icon-circled icon-bglight icon-2x"></i></a>
-								</span>
-                          <span>
-								<a href="#"><i class="icon-file icon-circled icon-bglight icon-2x"></i></a>
-								</span>
-                        </div>
-                      </figcaption>
-                    </figure>
-                  </div>
-                </div>
-                <div class="span3">
-                  <div class="item">
-                    <figure>
-                      <div><img src="img/dummies/works/2.jpg" alt="" /></div>
-                      <figcaption>
-                        <div>
-                          <span>
-								<a href="img/dummies/works/big.png" data-pretty="prettyPhoto[gallery1]" title="Portfolio caption here"><i class="icon-plus icon-circled icon-bglight icon-2x"></i></a>
-								</span>
-                          <span>
-								<a href="#"><i class="icon-file icon-circled icon-bglight icon-2x"></i></a>
-								</span>
-                        </div>
-                      </figcaption>
-                    </figure>
-                  </div>
-                </div>
-                <div class="span3">
-                  <div class="item">
-                    <figure>
-                      <div><img src="img/dummies/works/3.jpg" alt="" /></div>
-                      <figcaption>
-                        <div>
-                          <span>
-								<a href="img/dummies/works/big.png" data-pretty="prettyPhoto[gallery1]" title="Portfolio caption here"><i class="icon-plus icon-circled icon-bglight icon-2x"></i></a>
-								</span>
-                          <span>
-								<a href="#"><i class="icon-file icon-circled icon-bglight icon-2x"></i></a>
-								</span>
-                        </div>
-                      </figcaption>
-                    </figure>
-                  </div>
-                </div>
-                <div class="span3">
-                  <div class="item">
-                    <figure>
-                      <div><img src="img/dummies/works/4.jpg" alt="" /></div>
-                      <figcaption>
-                        <div>
-                          <span>
-								<a href="img/dummies/works/big.png" data-pretty="prettyPhoto[gallery1]" title="Portfolio caption here"><i class="icon-plus icon-circled icon-bglight icon-2x"></i></a>
-								</span>
-                          <span>
-								<a href="#"><i class="icon-file icon-circled icon-bglight icon-2x"></i></a>
-								</span>
-                        </div>
-                      </figcaption>
-                    </figure>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <footer>
       <div class="container">
@@ -513,8 +459,9 @@
   <script src="js/toucheffects.js"></script>
   <script src="js/google-code-prettify/prettify.js"></script>
   <script src="js/jquery.bxslider.min.js"></script>
-  <script src="js/camera/camera.js"></script>
-  <script src="js/camera/setting.js"></script>
+  <!-- parallax slider -->
+  <script src="js/modernizr.custom.js"></script>
+  <script src="js/jquery.cslider.js"></script>
 
   <script src="js/jquery.prettyPhoto.js"></script>
   <script src="js/portfolio/jquery.quicksand.js"></script>
@@ -523,9 +470,16 @@
   <script src="js/jquery.flexslider.js"></script>
   <script src="js/animate.js"></script>
   <script src="js/inview.js"></script>
+  <script>
+    $(function() {
+      $('#da-slider').cslider();
+    });
+  </script>
 
   <!-- Template Custom JavaScript File -->
   <script src="js/custom.js"></script>
 
+
 </body>
+
 </html>
