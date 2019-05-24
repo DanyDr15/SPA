@@ -1,293 +1,302 @@
-<<<<<<< HEAD
-/*global jQuery:false */
-jQuery(document).ready(function ($) {
-  "use strict";
+;(function($){
+    "use strict"
+    var nav_offset_top = $('.header_area').height()+50; 
+    /*-------------------------------------------------------------------------------
+	  Navbar 
+	-------------------------------------------------------------------------------*/
 
-  (function () {
-
-    var $menu = $('.navigation nav'),
-      optionsList = '<option value="" selected>Go to..</option>';
-
-    $menu.find('li').each(function () {
-        var $this = $(this),
-          $anchor = $this.children('a'),
-          depth = $this.parents('ul').length - 1,
-          indent = '';
-
-        if (depth) {
-          while (depth > 0) {
-            indent += ' - ';
-            depth--;
-          }
+	//* Navbar Fixed  
+    function navbarFixed(){
+        if ( $('.header_area').length ){ 
+            $(window).scroll(function() {
+                var scroll = $(window).scrollTop();   
+                if (scroll >= nav_offset_top ) {
+                    $(".header_area").addClass("navbar_fixed");
+                } else {
+                    $(".header_area").removeClass("navbar_fixed");
+                }
+            });
+        };
+    };
+    navbarFixed();
+    
+    function testimonialSlider(){
+        if ( $('.testimonial_slider').length ){
+            $('.testimonial_slider').owlCarousel({
+                loop:true,
+                margin: 30,
+                items: 2,
+                nav:false,
+                autoplay: true,
+                dots: true,
+                smartSpeed: 1500,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                    },
+                    768: {
+                        items: 2,
+                    },
+                }
+            })
         }
-
-        $(".nav li").parent().addClass("bold");
-        optionsList += '<option value="' + $anchor.attr('href') + '">' + indent + ' ' + $anchor.text() + '</option>';
-      }).end()
-      .after('<select class="selectmenu">' + optionsList + '</select>');
-
-    $('select.selectmenu').on('change', function () {
-      window.location = $(this).val();
-    });
-
-  })();
-
-  //Navi hover
-  $('ul.nav li.dropdown').hover(function () {
-    $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn();
-  }, function () {
-    $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut();
-  });
-
-  //add some elements with animate effect
-
-  var iOS = false,
-    p = navigator.platform;
-
-  if (p === 'iPad' || p === 'iPhone' || p === 'iPod') {
-    iOS = true;
-  }
-
-  if (iOS === false) {
-
-    $('.flyIn').bind('inview', function (event, visible) {
-      if (visible === true) {
-        $(this).addClass('animated fadeInUp');
-      }
-    });
-
-    $('.flyLeft').bind('inview', function (event, visible) {
-      if (visible === true) {
-        $(this).addClass('animated fadeInLeftBig');
-      }
-    });
-
-    $('.flyRight').bind('inview', function (event, visible) {
-      if (visible === true) {
-        $(this).addClass('animated fadeInRightBig');
-      }
-    });
-
-  }
-
-  $(".box").hover(
-    function () {
-      $(this).find('.ico').addClass("animated rotateIn");
-      $(this).find('h4').addClass("animated fadeInUp");
-    },
-    function () {
-      $(this).find('.ico').removeClass("animated rotateIn");
-      $(this).find('h4').removeClass("animated fadeInUp");
     }
-  );
+    testimonialSlider();
+    
+    //------- Mailchimp js --------//  
 
-  $('.accordion').on('show', function (e) {
-
-    $(e.target).prev('.accordion-heading').find('.accordion-toggle').addClass('active');
-    $(e.target).prev('.accordion-heading').find('.accordion-toggle i').removeClass('icon-plus');
-    $(e.target).prev('.accordion-heading').find('.accordion-toggle i').addClass('icon-minus');
-  });
-
-  $('.accordion').on('hide', function (e) {
-    $(this).find('.accordion-toggle').not($(e.target)).removeClass('active');
-    $(this).find('.accordion-toggle i').not($(e.target)).removeClass('icon-minus');
-    $(this).find('.accordion-toggle i').not($(e.target)).addClass('icon-plus');
-  });
-
-  // testimonial
-  var TestiSlide = $('.bxslider');
-  TestiSlide.bxSlider({
-    auto: true,
-    pager: false,
-    controls: false,
-    useCSS: false,
-    speed: 2000,
-    easing: 'easeOutElastic',
-    mode: 'horizontal',
-    controlDirections: true
-  });
-
-  //prettyphoto
-  $("a[data-pretty^='prettyPhoto']").prettyPhoto({
-    social_tools: ''
-  });
-
-  // tooltip
-  $('.social-network li a, .options_box .color a').tooltip();
-
-  //scroll to top
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 100) {
-      $('.scrollup').fadeIn();
-
-    } else {
-      $('.scrollup').fadeOut();
-
+    function mailChimp(){
+        $('#mc_embed_signup').find('form').ajaxChimp();
     }
-  });
-
-  $('.scrollup').click(function () {
-    $("html, body").animate({
-      scrollTop: 0
-    }, 1000);
-    return false;
-  });
-
-  //flexslider
-  $('.flexslider').flexslider({
-    animation: "fade",
-    directionNav: true,
-    controlNav: false,
-    pauseOnAction: true,
-    pauseOnHover: true,
-    slideshowSpeed: 5500
-  });
-
-});
-=======
-/*global jQuery:false */
-jQuery(document).ready(function ($) {
-  "use strict";
-
-  (function () {
-
-    var $menu = $('.navigation nav'),
-      optionsList = '<option value="" selected>Go to..</option>';
-
-    $menu.find('li').each(function () {
-        var $this = $(this),
-          $anchor = $this.children('a'),
-          depth = $this.parents('ul').length - 1,
-          indent = '';
-
-        if (depth) {
-          while (depth > 0) {
-            indent += ' - ';
-            depth--;
-          }
+    mailChimp();
+    
+    /* ===== Parallax Effect===== */
+	
+	function parallaxEffect() {
+    	$('.bg-parallax').parallax();
+	}
+	parallaxEffect();
+    
+    
+    $('select').niceSelect();
+    $('#datetimepicker11,#datetimepicker1').datetimepicker({
+        daysOfWeekDisabled: [0, 6]
+    });
+    
+     /*---------gallery isotope js-----------*/
+    function galleryMasonry(){
+        if ( $('#gallery').length ){
+            $('#gallery').imagesLoaded( function() {
+              // images have loaded
+                // Activate isotope in container
+                $("#gallery").isotope({
+                    itemSelector: ".gallery_item",
+                    layoutMode: 'masonry',
+                    animationOptions: {
+                        duration: 750,
+                        easing: 'linear'
+                    }
+                });
+            })
         }
-
-        $(".nav li").parent().addClass("bold");
-        optionsList += '<option value="' + $anchor.attr('href') + '">' + indent + ' ' + $anchor.text() + '</option>';
-      }).end()
-      .after('<select class="selectmenu">' + optionsList + '</select>');
-
-    $('select.selectmenu').on('change', function () {
-      window.location = $(this).val();
-    });
-
-  })();
-
-  //Navi hover
-  $('ul.nav li.dropdown').hover(function () {
-    $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn();
-  }, function () {
-    $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut();
-  });
-
-  //add some elements with animate effect
-
-  var iOS = false,
-    p = navigator.platform;
-
-  if (p === 'iPad' || p === 'iPhone' || p === 'iPod') {
-    iOS = true;
-  }
-
-  if (iOS === false) {
-
-    $('.flyIn').bind('inview', function (event, visible) {
-      if (visible === true) {
-        $(this).addClass('animated fadeInUp');
-      }
-    });
-
-    $('.flyLeft').bind('inview', function (event, visible) {
-      if (visible === true) {
-        $(this).addClass('animated fadeInLeftBig');
-      }
-    });
-
-    $('.flyRight').bind('inview', function (event, visible) {
-      if (visible === true) {
-        $(this).addClass('animated fadeInRightBig');
-      }
-    });
-
-  }
-
-  $(".box").hover(
-    function () {
-      $(this).find('.ico').addClass("animated rotateIn");
-      $(this).find('h4').addClass("animated fadeInUp");
-    },
-    function () {
-      $(this).find('.ico').removeClass("animated rotateIn");
-      $(this).find('h4').removeClass("animated fadeInUp");
     }
-  );
-
-  $('.accordion').on('show', function (e) {
-
-    $(e.target).prev('.accordion-heading').find('.accordion-toggle').addClass('active');
-    $(e.target).prev('.accordion-heading').find('.accordion-toggle i').removeClass('icon-plus');
-    $(e.target).prev('.accordion-heading').find('.accordion-toggle i').addClass('icon-minus');
-  });
-
-  $('.accordion').on('hide', function (e) {
-    $(this).find('.accordion-toggle').not($(e.target)).removeClass('active');
-    $(this).find('.accordion-toggle i').not($(e.target)).removeClass('icon-minus');
-    $(this).find('.accordion-toggle i').not($(e.target)).addClass('icon-plus');
-  });
-
-  // testimonial
-  var TestiSlide = $('.bxslider');
-  TestiSlide.bxSlider({
-    auto: true,
-    pager: false,
-    controls: false,
-    useCSS: false,
-    speed: 2000,
-    easing: 'easeOutElastic',
-    mode: 'horizontal',
-    controlDirections: true
-  });
-
-  //prettyphoto
-  $("a[data-pretty^='prettyPhoto']").prettyPhoto({
-    social_tools: ''
-  });
-
-  // tooltip
-  $('.social-network li a, .options_box .color a').tooltip();
-
-  //scroll to top
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 100) {
-      $('.scrollup').fadeIn();
-
-    } else {
-      $('.scrollup').fadeOut();
-
+    galleryMasonry();
+	
+	/*----------------------------------------------------*/
+    /*  Simple LightBox js
+    /*----------------------------------------------------*/
+    $('.imageGallery1 .light').simpleLightbox();
+    
+    /*----------------------------------------------------*/
+    /*  Google map js
+    /*----------------------------------------------------*/
+    
+    if ( $('#mapBox').length ){
+        var $lat = $('#mapBox').data('lat');
+        var $lon = $('#mapBox').data('lon');
+        var $zoom = $('#mapBox').data('zoom');
+        var $marker = $('#mapBox').data('marker');
+        var $info = $('#mapBox').data('info');
+        var $markerLat = $('#mapBox').data('mlat');
+        var $markerLon = $('#mapBox').data('mlon');
+        var map = new GMaps({
+        el: '#mapBox',
+        lat: $lat,
+        lng: $lon,
+        scrollwheel: false,
+        scaleControl: true,
+        streetViewControl: false,
+        panControl: true,
+        disableDoubleClickZoom: true,
+        mapTypeControl: false,
+        zoom: $zoom,
+            styles: [
+                {
+                    "featureType": "water",
+                    "elementType": "geometry.fill",
+                    "stylers": [
+                        {
+                            "color": "#dcdfe6"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "transit",
+                    "stylers": [
+                        {
+                            "color": "#808080"
+                        },
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road.highway",
+                    "elementType": "geometry.stroke",
+                    "stylers": [
+                        {
+                            "visibility": "on"
+                        },
+                        {
+                            "color": "#dcdfe6"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road.highway",
+                    "elementType": "geometry.fill",
+                    "stylers": [
+                        {
+                            "color": "#ffffff"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road.local",
+                    "elementType": "geometry.fill",
+                    "stylers": [
+                        {
+                            "visibility": "on"
+                        },
+                        {
+                            "color": "#ffffff"
+                        },
+                        {
+                            "weight": 1.8
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road.local",
+                    "elementType": "geometry.stroke",
+                    "stylers": [
+                        {
+                            "color": "#d7d7d7"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "poi",
+                    "elementType": "geometry.fill",
+                    "stylers": [
+                        {
+                            "visibility": "on"
+                        },
+                        {
+                            "color": "#ebebeb"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "administrative",
+                    "elementType": "geometry",
+                    "stylers": [
+                        {
+                            "color": "#a7a7a7"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road.arterial",
+                    "elementType": "geometry.fill",
+                    "stylers": [
+                        {
+                            "color": "#ffffff"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road.arterial",
+                    "elementType": "geometry.fill",
+                    "stylers": [
+                        {
+                            "color": "#ffffff"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "landscape",
+                    "elementType": "geometry.fill",
+                    "stylers": [
+                        {
+                            "visibility": "on"
+                        },
+                        {
+                            "color": "#efefef"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "color": "#696969"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "administrative",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "visibility": "on"
+                        },
+                        {
+                            "color": "#737373"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "poi",
+                    "elementType": "labels.icon",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "poi",
+                    "elementType": "labels",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road.arterial",
+                    "elementType": "geometry.stroke",
+                    "stylers": [
+                        {
+                            "color": "#d6d6d6"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road",
+                    "elementType": "labels.icon",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                },
+                {},
+                {
+                    "featureType": "poi",
+                    "elementType": "geometry.fill",
+                    "stylers": [
+                        {
+                            "color": "#dadada"
+                        }
+                    ]
+                }
+            ]
+        });
     }
-  });
 
-  $('.scrollup').click(function () {
-    $("html, body").animate({
-      scrollTop: 0
-    }, 1000);
-    return false;
-  });
-
-  //flexslider
-  $('.flexslider').flexslider({
-    animation: "fade",
-    directionNav: true,
-    controlNav: false,
-    pauseOnAction: true,
-    pauseOnHover: true,
-    slideshowSpeed: 5500
-  });
-
-});
->>>>>>> 0eca43450732591e59c6284929552589a3bbe380
+})(jQuery)

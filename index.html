@@ -1,550 +1,463 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!--<link rel="icon" href="img/favicon.png" type="image/png">-->
+        <title>GRAFICACION</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="vendors/linericon/style.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+        <link rel="stylesheet" href="vendors/lightbox/simpleLightbox.css">
+        <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+        <link rel="stylesheet" href="vendors/animate-css/animate.css">
+        <!-- main css -->
+        <link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/responsive.css">
+		<style>
+		h1.normal{
+		
+			border: 2px solid rgb(63, 39, 39);
+			  border-radius: 8px;
+			  text-align: center;
+			  color: black;
+		}
+		</style>
+    </head>
+    <body>
+        
+        <!--================Header Menu Area =================-->
+        <header class="header_area">
+            <div class="main_menu">
+            	<nav class="navbar navbar-expand-lg navbar-light">
+					<div class="container box_1620">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<a class="navbar-brand logo_h" href="index.html"><h1>GyF </h1></a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+							<ul class="nav navbar-nav menu_nav ml-auto">
+								<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li> 
+								<li class="nav-item"><a class="nav-link" href="about-us.html">About</a></li> 
+								<li class="nav-item"><a class="nav-link" href="service.html">Services</a>
+								<li class="nav-item submenu dropdown">
+									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
+									<ul class="dropdown-menu">
+										<li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a>
+										<li class="nav-item"><a class="nav-link" href="portfolio-details.html">Portfolio Details</a>
+										<li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>
+									</ul>
+								</li> 
+								<li class="nav-item submenu dropdown">
+									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
+									<ul class="dropdown-menu">
+										<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+										<li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
+									</ul>
+								</li> 
 
-<head>
-  <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-5XGD2R3');</script>
-    <!-- End Google Tag Manager -->
-
-  <meta charset="utf-8">
-  <title>BLOG</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Your page description here" />
-  <meta name="author" content="" />
-
-  <!-- css -->
-  <link href="https://fonts.googleapis.com/css?family=Handlee|Open+Sans:300,400,600,700,800" rel="stylesheet">
-  <link href="css/bootstrap.css" rel="stylesheet" />
-  <link href="css/bootstrap-responsive.css" rel="stylesheet" />
-  <link href="css/flexslider.css" rel="stylesheet" />
-  <link href="css/prettyPhoto.css" rel="stylesheet" />
-  <link href="css/camera.css" rel="stylesheet" />
-  <link href="css/jquery.bxslider.css" rel="stylesheet" />
-  <link href="css/style.css" rel="stylesheet" />
-
-  <!-- Theme skin -->
-  <link href="color/default.css" rel="stylesheet" />
-
-  <!-- Fav and touch icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png" />
-  <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png" />
-  <link rel="shortcut icon" href="ico/favicon.png" />
-
-  <!-- =======================================================
-    Theme Name: Eterna
-    Theme URL: https://bootstrapmade.com/eterna-free-multipurpose-bootstrap-template/
-    Author: BootstrapMade.com
-    Author URL: https://bootstrapmade.com
-  ======================================================= -->
-</head>
-
-<body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5XGD2R3"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
-
-  <div id="wrapper">
-
-    <!-- start header -->
-    <header>
-      <div class="top">
-        <div class="container">
-          <div class="row">
-            <div class="span6">
-              <p class="topcontact"><i class="icon-phone"></i> +593 981283047</p>
+								<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+							</ul>
+							<ul class="nav navbar-nav navbar-right">
+								<li class="nav-item"><a href="#" class="search"><i class="lnr lnr-magnifier"></i></a></li>
+							</ul>
+						</div> 
+					</div>
+            	</nav>
             </div>
-            <div class="span6">
-
-              <ul class="social-network">
-                <li><a href="#" data-placement="bottom" title="Facebook"><i class="icon-facebook icon-white"></i></a></li>
-                <li><a href="#" data-placement="bottom" title="Twitter"><i class="icon-twitter icon-white"></i></a></li>
-                <li><a href="#" data-placement="bottom" title="Linkedin"><i class="icon-linkedin icon-white"></i></a></li>
-                <li><a href="#" data-placement="bottom" title="Pinterest"><i class="icon-pinterest  icon-white"></i></a></li>
-                <li><a href="#" data-placement="bottom" title="Google +"><i class="icon-google-plus icon-white"></i></a></li>
-                <li><a href="#" data-placement="bottom" title="Dribbble"><i class="icon-dribbble icon-white"></i></a></li>
-              </ul>
-
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-
-
-        <div class="row nomargin">
-          <div class="span4">
-            <div class="logo">
-              <a href="index.html"><img src="img/BLOG.jpg" alt="" /></a>
-            </div>
-          </div>
-          <div class="span8">
-            <div class="navbar navbar-static-top">
-              <div class="navigation">
-                <nav>
-                  <ul class="nav topnav">
-                    <li class="dropdown active">
-                      <a href="index.html"><i class="icon-home"></i> Home <i class="icon-angle-down"></i></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="index-alt2.html">Homepage 2</a></li>
-                        <li><a href="index-alt3.html">Homepage 3</a></li>
-                        <li><a href="index-alt4.html">Parallax slider</a></li>
-                        <li><a href="index-landingpage.html">Landing page</a></li>
-                      </ul>
-                    </li>
-                    <li class="dropdown">
-                      <a href="#">Features <i class="icon-angle-down"></i></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="typography.html">Typography</a></li>
-                        <li><a href="components.html">Components</a></li>
-                        <li><a href="icons.html">Icons</a></li>
-                        <li><a href="icon-variations.html">Icon variations</a></li>
-                        <li class="dropdown"><a href="#">3rd menus<i class="icon-angle-right"></i></a>
-                          <ul class="dropdown-menu sub-menu-level1">
-                            <li><a href="index.html">Sub menu</a></li>
-                            <li><a href="index.html">Sub menu</a></li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="dropdown">
-                      <a href="#">Pages <i class="icon-angle-down"></i></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="about.html">About us</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="team.html">Team</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="pricingbox.html">Pricing boxes</a></li>
-                        <li><a href="404.html">404</a></li>
-                      </ul>
-                    </li>
-                    <li class="dropdown">
-                      <a href="#">Portfolio <i class="icon-angle-down"></i></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="portfolio-2cols.html">Portfolio 2 columns</a></li>
-                        <li><a href="portfolio-3cols.html">Portfolio 3 columns</a></li>
-                        <li><a href="portfolio-4cols.html">Portfolio 4 columns</a></li>
-                        <li><a href="portfolio-detail.html">Portfolio detail</a></li>
-                      </ul>
-                    </li>
-                    <li class="dropdown">
-                      <a href="#">Blog <i class="icon-angle-down"></i></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="blog-left-sidebar.html">Blog left sidebar</a></li>
-                        <li><a href="blog-right-sidebar.html">Blog right sidebar</a></li>
-                        <li><a href="blog-fullwidth.html">Blog fullwidth</a></li>
-                        <li><a href="post-left-sidebar.html">Post left sidebar</a></li>
-                        <li><a href="post-right-sidebar.html">Post right sidebar</a></li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="contact.html">Contact </a>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-              <!-- end navigation -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-    <!-- end header -->
-
-    <!-- section featured -->
-    <section id="featured">
-
-      <!-- slideshow start here -->
-
-      <div class="camera_wrap" id="camera-slide">
-
-        <!-- slide 1 here -->
-        <div data-src="img/slides/camera/slide1/tecnologias.jpg">
-          <div class="camera_caption fadeFromLeft">
+        </header>
+        <!--================Header Menu Area =================-->
+        
+        <!--================Home Banner Area =================-->
+        <section >
+            	
+			<h1 class="normal" style="background-color:DodgerBlue;"> BIENVENIDOS AL BLOG</h1>
+		
+			
+				
+				
+            
+        </section>
+        <!--================End Home Banner Area =================-->
+        
+        <!--================Offer Area =================-->
+        <section class="offer_area p_120">
+        	<div class="container">
+        		<div class="offer_title">
+        			<h5>BLOGS</h5>
+        			
+        		</div>
+        		<div class="row offer_inner">
+        			<div class="col-lg-4">
+        				<div class="offer_item">
+        				<a href="html.html"><img class="img-fluid" src="img/offer/html.jpg" alt=""></a>
+        					<div class="offer_text">
+        						<h4>HTML,CSS,JS</h4>
+        						<p>Se muestra el resultado del test de W3schools.</p>
+        					</div>
+        				</div>
+        			</div>
+        			<div class="col-lg-4">
+        				<div class="offer_item">
+        					<img class="img-fluid" src="img/offer/css.jpg" alt="">
+        					<div class="offer_text">
+        						<h4>EJERCICIOS CSS</h4>
+        						<p>Ejercicios para poner en practica lo aprendido.</p>
+        					</div>
+        				</div>
+        			</div>
+        			<div class="col-lg-4">
+        				<div class="offer_item">
+        					<img class="img-fluid" src="img/offer/concrete.jpg" alt="">
+        					<div class="offer_text">
+        						<h4>Addiction Whit Gambling</h4>
+        						<p>It is a good idea to think of your PC as an office. It stores files, programs, pictures. This can be compared to an actual.</p>
+        					</div>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+        </section>
+        <!--================End Offer Area =================-->
+        
+        <!--================Feature Area =================-->
+        <section class="feature_area p_120">
+        	<div class="container">	
+        		<div class="main_title">
+        			<h2>Our Top Rated Features</h2>
+        			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
+        		</div>
+        		<div class="row feature_inner">
+        			<div class="col-lg-3 col-sm-6">
+        				<div class="feature_item">
+        					<h4>Unique Design</h4>
+        					<p>Most people who work in an office environment, buy computer products, or have a computer at </p>
+        				</div>
+        			</div>
+        			<div class="col-lg-3 col-sm-6">
+        				<div class="feature_item">
+        					<h4>Appropriate UX</h4>
+        					<p>Most people who work in an office environment, buy computer products, or have a computer at </p>
+        				</div>
+        			</div>
+        			<div class="col-lg-3 col-sm-6">
+        				<div class="feature_item">
+        					<h4>Perfect Visual</h4>
+        					<p>Most people who work in an office environment, buy computer products, or have a computer at </p>
+        				</div>
+        			</div>
+        			<div class="col-lg-3 col-sm-6">
+        				<div class="feature_item">
+        					<h4>Different Layout</h4>
+        					<p>Most people who work in an office environment, buy computer products, or have a computer at </p>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+        </section>
+        <!--================End Feature Area =================-->
+        
+        <!--================Home Gallery Area =================-->
+        <section class="home_gallery_area p_120">
+        	<div class="container">
+        		<div class="main_title">
+        			<h2>Our Recent Completed Projects</h2>
+        			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
+        		</div>
+        		<div class="isotope_fillter">
+        			<ul class="gallery_filter list">
+						<li class="active" data-filter="*"><a href="#">All Categories</a></li>
+						<li data-filter=".brand"><a href="#">Branding</a></li>
+						<li data-filter=".manipul"><a href="#">Image Manipulation</a></li>
+						<li data-filter=".creative"><a href="#">Creative Work</a></li>
+						<li data-filter=".design"><a href="#">Web Design</a></li>
+						<li data-filter=".print"><a href="#">Print Material</a></li>
+					</ul>
+        		</div>
+        	</div>
+        	<div class="container">
+        		<div class="gallery_f_inner row imageGallery1">
+        			<div class="col-lg-4 col-md-4 col-sm-6 brand manipul design print">
+        				<div class="h_gallery_item">
+        					<div class="g_img_item">
+        						<img class="img-fluid" src="img/gallery/project-1.jpg" alt="">
+        						<a class="light" href="img/gallery/project-1.jpg"><img src="img/gallery/icon.png" alt=""></a>
+        					</div>
+        					<div class="g_item_text">
+        						<h4>3D Helmet Design</h4>
+        						<p>Client Project</p>
+        					</div>
+        				</div>
+        			</div>
+        			<div class="col-lg-4 col-md-4 col-sm-6 brand manipul creative">
+        				<div class="h_gallery_item">
+        					<div class="g_img_item">
+        						<img class="img-fluid" src="img/gallery/project-2.jpg" alt="">
+        						<a class="light" href="img/gallery/project-2.jpg"><img src="img/gallery/icon.png" alt=""></a>
+        					</div>
+        					<div class="g_item_text">
+        						<h4>2D Vinyl Design</h4>
+        						<p>Client Project</p>
+        					</div>
+        				</div>
+        			</div>
+        			<div class="col-lg-4 col-md-4 col-sm-6 manipul creative design print">
+        				<div class="h_gallery_item">
+        					<div class="g_img_item">
+        						<img class="img-fluid" src="img/gallery/project-3.jpg" alt="">
+        						<a class="light" href="img/gallery/project-3.jpg"><img src="img/gallery/icon.png" alt=""></a>
+        					</div>
+        					<div class="g_item_text">
+        						<h4>Creative Poster Design</h4>
+        						<p>Client Project</p>
+        					</div>
+        				</div>
+        			</div>
+        			<div class="col-lg-4 col-md-4 col-sm-6 brand creative print">
+        				<div class="h_gallery_item">
+        					<div class="g_img_item">
+        						<img class="img-fluid" src="img/gallery/project-4.jpg" alt="">
+        						<a class="light" href="img/gallery/project-4.jpg"><img src="img/gallery/icon.png" alt=""></a>
+        					</div>
+        					<div class="g_item_text">
+        						<h4>Embosed Logo Design</h4>
+        						<p>Client Project</p>
+        					</div>
+        				</div>
+        			</div>
+        			<div class="col-lg-4 col-md-4 col-sm-6 brand manipul design">
+        				<div class="h_gallery_item">
+        					<div class="g_img_item">
+        						<img class="img-fluid" src="img/gallery/project-5.jpg" alt="">
+        						<a class="light" href="img/gallery/project-5.jpg"><img src="img/gallery/icon.png" alt=""></a>
+        					</div>
+        					<div class="g_item_text">
+        						<h4>3D Disposable Bottle</h4>
+        						<p>Client Project</p>
+        					</div>
+        				</div>
+        			</div>
+        			<div class="col-lg-4 col-md-4 col-sm-6 brand creative">
+        				<div class="h_gallery_item">
+        					<div class="g_img_item">
+        						<img class="img-fluid" src="img/gallery/project-6.jpg" alt="">
+        						<a class="light" href="img/gallery/project-6.jpg"><img src="img/gallery/icon.png" alt=""></a>
+        					</div>
+        					<div class="g_item_text">
+        						<h4>3D Logo Design</h4>
+        						<p>Client Project</p>
+        					</div>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+        </section>
+        <!--================End Home Gallery Area =================-->
+        
+        <!--================Home Contact Area =================-->
+        <section class="home_contact_area">
+			<div class="left_img">
+				<img src="img/left-img.jpg" alt="">
+			</div>
+			<div class="h_right_form">
+				<div class="h_form_inner">
+					<h4>Get a free Quotation</h4>
+					<form class="row home_contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+						<div class="form-group col-md-12">
+							<input type="text" class="form-control" id="name" name="name" placeholder="Your name">
+						</div>
+						<div class="form-group col-md-6">
+							<input type="text" class="form-control" id="phone" name="phone" placeholder="Phone">
+						</div>
+						<div class="form-group col-md-6">
+							<input type="email" class="form-control" id="email" name="email" placeholder="Email address">
+						</div>
+						<div class="form-group col-md-12">
+							<textarea class="form-control" name="message" id="message" rows="1" placeholder="Wrtie message"></textarea>
+						</div>
+						<div class="form-group col-md-12">
+							<button type="submit" value="submit" class="btn submit_btn form-control">Get Free Quote</button>
+						</div>
+					</form>
+				</div>
+			</div>
+        </section>
+        <!--================End Home Contact Area =================-->
+        
+        <!--================Latest Blog Area =================-->
+        <section class="latest_blog_area p_120">
+        	<div class="container">
+        		<div class="main_title">
+        			<h2>Latest Posts from Blog</h2>
+        			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididun</p>
+        		</div>
+        		<div class="row latest_blog_inner">
+        			<div class="col-lg-3 col-md-6">
+        				<div class="l_blog_item">
+        					<div class="l_blog_img">
+        						<img class="img-fluid" src="img/blog/latest-post/l-post-1.jpg" alt="">
+        					</div>
+        					<div class="l_blog_text">
+        						<div class="date">
+        							<a href="#">25 October, 2017  |  By Mark Wiens</a>
+        						</div>
+        						<a href="#"><h4>Addiction When Gambling Becomes A Problem</h4></a>
+        						<p>Computers have become ubiquitous in almost every facet of our lives. At work, desk jockeys spend hours in front of their desktops, while delivery</p>
+        					</div>
+        				</div>
+        			</div>
+        			<div class="col-lg-3 col-md-6">
+        				<div class="l_blog_item">
+        					<div class="l_blog_img">
+        						<img class="img-fluid" src="img/blog/latest-post/l-post-2.jpg" alt="">
+        					</div>
+        					<div class="l_blog_text">
+        						<div class="date">
+        							<a href="#">25 October, 2017  |  By Mark Wiens</a>
+        						</div>
+        						<a href="#"><h4>Computer Hardware Desktops And Notebooks And Handhelds</h4></a>
+        						<p>Computers have become ubiquitous in almost every facet of our lives. At work, desk jockeys spend hours in front of their desktops, while delivery</p>
+        					</div>
+        				</div>
+        			</div>
+        			<div class="col-lg-3 col-md-6">
+        				<div class="l_blog_item">
+        					<div class="l_blog_img">
+        						<img class="img-fluid" src="img/blog/latest-post/l-post-3.jpg" alt="">
+        					</div>
+        					<div class="l_blog_text">
+        						<div class="date">
+        							<a href="#">25 October, 2017  |  By Mark Wiens</a>
+        						</div>
+        						<a href="#"><h4>Make Myspace Your Best Designed Space</h4></a>
+        						<p>Computers have become ubiquitous in almost every facet of our lives. At work, desk jockeys spend hours in front of their desktops, while delivery</p>
+        					</div>
+        				</div>
+        			</div>
+        			<div class="col-lg-3 col-md-6">
+        				<div class="l_blog_item">
+        					<div class="l_blog_img">
+        						<img class="img-fluid" src="img/blog/latest-post/l-post-4.jpg" alt="">
+        					</div>
+        					<div class="l_blog_text">
+        						<div class="date">
+        							<a href="#">25 October, 2017  |  By Mark Wiens</a>
+        						</div>
+        						<a href="#"><h4>Video Games Playing With Imagination</h4></a>
+        						<p>Computers have become ubiquitous in almost every facet of our lives. At work, desk jockeys spend hours in front of their desktops, while delivery</p>
+        					</div>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+        </section>
+        <!--================End Latest Blog Area =================-->
+        
+        <!--================ start footer Area  =================-->	
+        <footer class="footer-area section_gap">
             <div class="container">
-              <div class="row">
-                <div class="span6">
-                  <h2 class="animated fadeInDown"><strong>Great template for <span class="colored">multi usage</span></strong></h2>
-                  <p class="animated fadeInUp"> Vim porro dicam reprehendunt te, populo quodsi dissentiet cum ad. Ne natum deseruisse vis. Iisque deseruisse sententiae mel ne, dolores appetere vim ut. Sea no tamquam reprimique.</p>
-                  <a href="#" class="btn btn-success btn-large animated fadeInUp">
-											<i class="icon-link"></i> Read more
-										</a>
-                  <a href="#" class="btn btn-theme btn-large animated fadeInUp">
-											<i class="icon-download"></i> Download
-										</a>
-                </div>
-                <div class="span6">
-                  <img src="img/slides/camera/slide1/screen.png" alt="" class="animated bounceInDown delay1" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- slide 2 here -->
-        <div data-src="img/slides/camera/slide2/img1.jpg">
-          <div class="camera_caption fadeFromLeft">
-            <div class="container">
-              <div class="row">
-                <div class="span6">
-                  <img src="img/slides/camera/slide2/iMac.png" alt="" />
-                </div>
-                <div class="span6">
-                  <h2 class="animated fadeInDown"><strong>Put your <span class="colored">Opt in form</span></strong></h2>
-                  <p class="animated fadeInUp"> Vim porro dicam reprehendunt te, populo quodsi dissentiet cum ad. Ne natum deseruisse vis. Iisque deseruisse sententiae mel ne, dolores appetere vim ut. Sea no tamquam reprimique.</p>
-                  <form>
-                    <div class="input-append">
-                      <input class="span3 input-large" type="text">
-                      <button class="btn btn-theme btn-large" type="submit">Subscribe</button>
+                <div class="row">
+                    <div class="col-lg-3  col-md-6 col-sm-6">
+                        <div class="single-footer-widget">
+                            <h6 class="footer_title">About Biznance</h6>
+                            <p>The world has become so fast paced that people don’t want to stand by reading a page of information, they would much rather look at a presentation and understand the message. It has come to a point where images and videos are</p>
+                        </div>
                     </div>
-                  </form>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- slide 3 here -->
-        <div data-src="img/slides/camera/slide2/img1.jpg">
-          <div class="camera_caption fadeFromLeft">
-            <div class="container">
-              <div class="row">
-                <div class="span12 aligncenter">
-                  <h2 class="animated fadeInDown"><strong><span class="colored">Responsive</span> and <span class="colored">cross broswer</span> compatibility</strong></h2>
-                  <p class="animated fadeInUp">Pellentesque habitant morbi tristique senectus et netus et malesuada</p>
-                  <img src="img/slides/camera/slide3/browsers.png" alt="" class="animated bounceInDown delay1" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- slideshow end here -->
-
-    </section>
-    <!-- /section featured -->
-<!--
-    <section id="content">
-      <div class="container">
-
-
-        <div class="row">
-          <div class="span12">
-            <div class="row">
-              <div class="span4">
-                <div class="box flyLeft">
-                  <div class="icon">
-                    <i class="ico icon-circled icon-bgdark icon-star active icon-3x"></i>
-                  </div>
-                  <div class="text">
-                    <h4>High <strong>Quality</strong></h4>
-                    <p>
-                      Lorem ipsum dolor sit amet, has ei ipsum scaevola deseruisse am sea facilisis.
-                    </p>
-                    <a href="#">Learn More</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="span4">
-                <div class="box flyIn">
-                  <div class="icon">
-                    <i class="ico icon-circled icon-bgdark icon-dropbox active icon-3x"></i>
-                  </div>
-                  <div class="text">
-                    <h4>Rich of <strong>Features</strong></h4>
-                    <p>
-                      Lorem ipsum dolor sit amet, has ei ipsum scaevola deseruisse am sea facilisis.
-                    </p>
-                    <a href="#">Learn More</a>
-                  </div>
-                </div>
-              </div>
-              <div class="span4">
-                <div class="box flyRight">
-                  <div class="icon">
-                    <i class="ico icon-circled icon-bgdark icon-laptop active icon-3x"></i>
-                  </div>
-                  <div class="text">
-                    <h4>Modern <strong>Design</strong></h4>
-                    <p>
-                      Lorem ipsum dolor sit amet, has ei ipsum scaevola deseruisse am sea facilisis.
-                    </p>
-                    <a href="#">Learn More</a>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="span12">
-            <div class="solidline"></div>
-          </div>
-        </div>
-
-
-
-        <div class="row">
-          <div class="span12 aligncenter">
-            <h3 class="title">What people <strong>saying</strong> about us</h3>
-            <div class="blankline30"></div>
-
-            <ul class="bxslider">
-              <li>
-                <blockquote>
-                  Aliquam a orci quis nisi sagittis sagittis. Etiam adipiscing, justo quis feugiat.Suspendisse eu erat quam. Vivamus porttitor eros quis nisi lacinia sed interdum lorem vulputate. Aliquam a orci quis nisi sagittis sagittis. Etiam adipiscing, justo quis
-                  feugiat
-                </blockquote>
-                <div class="testimonial-autor">
-                  <img src="img/dummies/testimonial/1.png" alt="" />
-                  <h4>Hillary Doe</h4>
-                  <a href="#">www.companyname.com</a>
-                </div>
-              </li>
-              <li>
-                <blockquote>
-                  Aliquam a orci quis nisi sagittis sagittis. Etiam adipiscing, justo quis feugiat.Suspendisse eu erat quam. Vivamus porttitor eros quis nisi lacinia sed interdum lorem vulputate. Aliquam a orci quis nisi sagittis sagittis. Etiam adipiscing, justo quis
-                  feugiat
-                </blockquote>
-                <div class="testimonial-autor">
-                  <img src="img/dummies/testimonial/2.png" alt="" />
-                  <h4>Michael Doe</h4>
-                  <a href="#">www.companyname.com</a>
-                </div>
-              </li>
-              <li>
-                <blockquote>
-                  Aliquam a orci quis nisi sagittis sagittis. Etiam adipiscing, justo quis feugiat.Suspendisse eu erat quam. Vivamus porttitor eros quis nisi lacinia sed interdum lorem vulputate. Aliquam a orci quis nisi sagittis sagittis. Etiam adipiscing, justo quis
-                  feugiat
-                </blockquote>
-                <div class="testimonial-autor">
-                  <img src="img/dummies/testimonial/3.png" alt="" />
-                  <h4>Mark Donovan</h4>
-                  <a href="#">www.companyname.com</a>
-                </div>
-              </li>
-              <li>
-                <blockquote>
-                  Aliquam a orci quis nisi sagittis sagittis. Etiam adipiscing, justo quis feugiat.Suspendisse eu erat quam. Vivamus porttitor eros quis nisi lacinia sed interdum lorem vulputate. Aliquam a orci quis nisi sagittis sagittis. Etiam adipiscing, justo quis
-                  feugiat
-                </blockquote>
-                <div class="testimonial-autor">
-                  <img src="img/dummies/testimonial/4.png" alt="" />
-                  <h4>Marry Doe Elliot</h4>
-                  <a href="#">www.companyname.com</a>
-                </div>
-              </li>
-            </ul>
-
-          </div>
-        </div>
-
-      </div>
-    </section>
-  -->
-
-    <section id="works">
-      <div class="container">
-        <div class="row">
-          <div class="span12">
-            <h4 class="title">Trabajos <strong>Recientes</strong></h4>
-            <div class="row">
-
-              <div class="grid cs-style-4">
-
-                <div class="span3">
-                  <div class="item">
-                    <figure>
-                      <div><img src="img/html.jpg" alt="" /></div>
-                      <figcaption>
-                        <div>
-                          <span>
-							<!--	<a href="img/dummies/works/big.png" data-pretty="prettyPhoto[gallery1]" title="Portfolio caption here"><i class="icon-plus icon-circled icon-bglight icon-2x"></i></a>-->
-								</span>
-                <span>
-								<a href="about.html"><i class="icon-file icon-circled icon-bglight icon-2x"></i></a>
-								</span>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="single-footer-widget">
+                            <h6 class="footer_title">Navigation Links</h6>
+                            <div class="row">
+                                <div class="col-4">
+                                    <ul class="list">
+                                        <li><a href="#">Home</a></li>
+                                        <li><a href="#">Feature</a></li>
+                                        <li><a href="#">Services</a></li>
+                                        <li><a href="#">Portfolio</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-4">
+                                    <ul class="list">
+                                        <li><a href="#">Team</a></li>
+                                        <li><a href="#">Pricing</a></li>
+                                        <li><a href="#">Blog</a></li>
+                                        <li><a href="#">Contact</a></li>
+                                    </ul>
+                                </div>										
+                            </div>							
                         </div>
-                      </figcaption>
-                    </figure>
-                  </div>
-                </div>
-
-
-                <div class="span3">
-                  <div class="item">
-                    <figure>
-                      <div><img src="img/dummies/works/2.jpg" alt="" /></div>
-                      <figcaption>
-                        <div>
-                          <span>
-								<a href="img/dummies/works/big.png" data-pretty="prettyPhoto[gallery1]" title="Portfolio caption here"><i class="icon-plus icon-circled icon-bglight icon-2x"></i></a>
-								</span>
-                          <span>
-								<a href="#"><i class="icon-file icon-circled icon-bglight icon-2x"></i></a>
-								</span>
+                    </div>							
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="single-footer-widget">
+                            <h6 class="footer_title">Newsletter</h6>
+                            <p>For business professionals caught between high OEM price and mediocre print and graphic output, </p>		
+                            <div id="mc_embed_signup">
+                                <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe_form relative">
+                                    <div class="input-group d-flex flex-row">
+                                        <input name="EMAIL" placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address '" required="" type="email">
+                                        <button class="btn sub-btn"><span class="lnr lnr-location"></span></button>		
+                                    </div>									
+                                    <div class="mt-10 info"></div>
+                                </form>
+                            </div>
                         </div>
-                      </figcaption>
-                    </figure>
-                  </div>
-                </div>
-
-                <div class="span3">
-                  <div class="item">
-                    <figure>
-                      <div><img src="img/dummies/works/3.jpg" alt="" /></div>
-                      <figcaption>
-                        <div>
-                          <span>
-								<a href="img/dummies/works/big.png" data-pretty="prettyPhoto[gallery1]" title="Portfolio caption here"><i class="icon-plus icon-circled icon-bglight icon-2x"></i></a>
-								</span>
-                          <span>
-								<a href="#"><i class="icon-file icon-circled icon-bglight icon-2x"></i></a>
-								</span>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="single-footer-widget instafeed">
+                            <h6 class="footer_title">InstaFeed</h6>
+                            <ul class="list instafeed d-flex flex-wrap">
+                                <li><img src="img/instagram/Image-01.jpg" alt=""></li>
+                                <li><img src="img/instagram/Image-02.jpg" alt=""></li>
+                                <li><img src="img/instagram/Image-03.jpg" alt=""></li>
+                                <li><img src="img/instagram/Image-04.jpg" alt=""></li>
+                                <li><img src="img/instagram/Image-05.jpg" alt=""></li>
+                                <li><img src="img/instagram/Image-06.jpg" alt=""></li>
+                                <li><img src="img/instagram/Image-07.jpg" alt=""></li>
+                                <li><img src="img/instagram/Image-08.jpg" alt=""></li>
+                            </ul>
                         </div>
-                      </figcaption>
-                    </figure>
-                  </div>
+                    </div>						
                 </div>
-
-                <div class="span3">
-                  <div class="item">
-                    <figure>
-                      <div><img src="img/dummies/works/4.jpg" alt="" /></div>
-                      <figcaption>
-                        <div>
-                          <span>
-								<a href="img/dummies/works/big.png" data-pretty="prettyPhoto[gallery1]" title="Portfolio caption here"><i class="icon-plus icon-circled icon-bglight icon-2x"></i></a>
-								</span>
-                          <span>
-								<a href="#"><i class="icon-file icon-circled icon-bglight icon-2x"></i></a>
-								</span>
-                        </div>
-                      </figcaption>
-                    </figure>
-                  </div>
+                <div class="border_line"></div>
+                <div class="row footer-bottom d-flex justify-content-between align-items-center">
+                    <p class="col-lg-8 col-md-8 footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                    <div class="col-lg-4 col-md-4 footer-social">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <a href="#"><i class="fa fa-behance"></i></a>
+                    </div>
                 </div>
-
-              </div>
-
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="span4">
-            <div class="widget">
-              <h5 class="widgetheading">Browse pages</h5>
-              <ul class="link-list">
-                <li><a href="#">Our company</a></li>
-                <li><a href="#">Terms and conditions</a></li>
-                <li><a href="#">Privacy policy</a></li>
-                <li><a href="#">Press release</a></li>
-                <li><a href="#">What we have done</a></li>
-                <li><a href="#">Our support forum</a></li>
-              </ul>
-
-            </div>
-          </div>
-          <div class="span4">
-            <div class="widget">
-              <h5 class="widgetheading">Get in touch</h5>
-              <address>
-							<strong>Eterna company Inc.</strong><br>
-							Somestreet 200 VW, Suite Village A.001<br>
-							Jakarta 13426 Indonesia
-						</address>
-              <p>
-                <i class="icon-phone"></i> (123) 456-7890 - (123) 555-7891 <br>
-                <i class="icon-envelope-alt"></i> email@domainname.com
-              </p>
-            </div>
-          </div>
-          <div class="span4">
-            <div class="widget">
-              <h5 class="widgetheading">Subscribe newsletter</h5>
-              <p>
-                Keep updated for new releases and freebies. Enter your e-mail and subscribe to our newsletter.
-              </p>
-              <form class="subscribe">
-                <div class="input-append">
-                  <input class="span2" id="appendedInputButton" type="text">
-                  <button class="btn btn-theme" type="submit">Subscribe</button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="sub-footer">
-        <div class="container">
-          <div class="row">
-            <div class="span6">
-              <div class="copyright">
-                <p><span>&copy; Eterna company. All right reserved</span></p>
-              </div>
-
-            </div>
-
-            <div class="span6">
-              <div class="credits">
-                <!--
-                  All the links in the footer should remain intact.
-                  You can delete the links only if you purchased the pro version.
-                  Licensing information: https://bootstrapmade.com/license/
-                  Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Eterna
-                -->
-                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </div>
-  <a href="#" class="scrollup"><i class="icon-angle-up icon-square icon-bglight icon-2x active"></i></a>
-
-  <!-- javascript
-    ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
-  <script src="js/jquery.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/bootstrap.js"></script>
-
-  <script src="js/modernizr.custom.js"></script>
-  <script src="js/toucheffects.js"></script>
-  <script src="js/google-code-prettify/prettify.js"></script>
-  <script src="js/jquery.bxslider.min.js"></script>
-  <script src="js/camera/camera.js"></script>
-  <script src="js/camera/setting.js"></script>
-
-  <script src="js/jquery.prettyPhoto.js"></script>
-  <script src="js/portfolio/jquery.quicksand.js"></script>
-  <script src="js/portfolio/setting.js"></script>
-
-  <script src="js/jquery.flexslider.js"></script>
-  <script src="js/animate.js"></script>
-  <script src="js/inview.js"></script>
-
-  <!-- Template Custom JavaScript File -->
-  <script src="js/custom.js"></script>
-
-</body>
+        </footer>
+		<!--================ End footer Area  =================-->
+        
+        
+        
+        
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/popper.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/stellar.js"></script>
+        <script src="vendors/lightbox/simpleLightbox.min.js"></script>
+        <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
+        <script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
+        <script src="vendors/isotope/isotope-min.js"></script>
+        <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+        <script src="js/jquery.ajaxchimp.min.js"></script>
+        <script src="vendors/counter-up/jquery.waypoints.min.js"></script>
+        <script src="vendors/counter-up/jquery.counterup.js"></script>
+        <script src="js/mail-script.js"></script>
+        <script src="js/theme.js"></script>
+    </body>
 </html>
