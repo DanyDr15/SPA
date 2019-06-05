@@ -12,44 +12,49 @@
 	
 	<br>
 	<form action = "">
-	
-		<b>Ingrese un numero:</b> <input type="text" id="n2" time=2s onchange="grafico()">
+		<div>
+		<b>Ingrese un numero:</b> <input type="text" id="n2" time="2s"  onchange="grafico()">
 		<br>
 		<br>
+	</div>	
 		</form >
-			
 		
+		<br>
+
+		<pre>
 			<script type="text/javascript">
 				function grafico(){
-				var n = parseInt(document.getElementById('n2').value);
-				if(n%2==0){
-					alert("Ingrese un numero impar")
-				}
-				else{
-				var c=n/2;
-				var c1=Math.round(c);
-				var c2 = c1-1;
 				
-				
-					for (var x=0; x<c2; x++) {
-						for (var y = 0; y <=x; y++) {
-							document.write("*");
-						}
-							document.write("<br>");
-					}
-					for(var x=0;x<c1;x++){
-						for(var t=0;t<x;t++){
-							document.write("&nbsp&nbsp");
-						}
-							for(var t=c1-x-1;t>=0;t--){
+						var a= document.getElementById("n2").value;
+						//Imprimir figuras de triangulos formados por asteriscos con ciclo for
+						var d,c;
+						//triangulo rectangulo recto a derechas
+
+						for (d=1;d<=a;d++)
+						{
+							for(c=1;c<=d;c++)
 								document.write("*");
-							}
 							document.write("<br>");
-					}
-					}
+						}
+						//document.write("<br>");
+
+						//triangulo rectangulo invertido a izquierdas
+						for (d=a;d>=1;d--)
+						{
+							for(c=1;c<=a-d;c++)
+								document.write("&nbsp&nbsp");
+							for(c=1;c<=d;c++)
+								document.write("*");
+							document.write("<br>");
+						}
+						document.write("<br>");
+
+						}
 	
-		}
+		
 		
 	</script>
+
+</pre>
 </body>
 </html>
