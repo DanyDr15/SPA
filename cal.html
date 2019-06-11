@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery - Operaciones matemáticas básicas</title>
+	<!--Fuente Roboto-->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+	<!--Estilos opcionales-->
+	<style>
+		body{font-family: 'Roboto', sans-serif;}
+		h2{color: #008040;text-transform: uppercase;}
+		input[type='text']{display: block;margin-bottom: 1em;}
+		#resultado{font-size: 2em;}
+		.opciones{display:block;margin-bottom: 1em;}
+	</style>
+</head>
+<body>
+
+	<h2>Operaciones matemáticas</h2>
+	<form action="#">
+	  <label for="valor1">Primer valor:</label>
+	  <input type="text" id="valor1" placeholder="Ingrese un número">
+	  <label for="valor2">Segundo valor:</label>
+	  <input type="text" id="valor2" placeholder="Ingrese un número">
+	  <p class="resultado">Resultado: <span id="resultado">0</span></p>
+	  <div class="opciones">
+		  <input type="radio" name="operacion" value="suma" checked> Suma
+		  <input type="radio" name="operacion" value="resta"> Resta
+		  <input type="radio" name="operacion" value="multiplicacion"> Multiplicación 
+		  <input type="radio" name="operacion" value="division"> División 
+	  </div>
+	  <button id="calcular">calcular</button>
+	</form>
+	
+	<!--jQuery-->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<!--Código JavaScript utilizando jQuery-->
+	<script>
+		$(function() {
+			//Operaciones matemáticas
+		  $('#calcular').click(function(e) {
+		  	e.preventDefault();
+		  	//Almaceno los valores de los inputs
+		  	var primerValor = $('#valor1').val();
+		  	var segundoValor = $('#valor2').val()
+
+		  	//Almacena el valor de la opción seleccionada
+		  	var opcionSeleccionada = $('input:radio[name=operacion]:checked').val();
+
+		  	//Condiciona para que acepte solo números usando las expresiones regulares
+		  	if(primerValor.match(/^[0-9]+$/) && segundoValor.match(/^[0-9]+$/)){
+		  		//Suma
+		  		if(opcionSeleccionada == 'suma'){
+			  		var resultado = parseFloat(primerValor) + parseFloat(segundoValor);
+			  	}else if(opcionSeleccionada == 'resta'){ //Resta
+			  		var resultado = parseFloat(primerValor) - parseFloat(segundoValor);
+			  	}else if(opcionSeleccionada == 'multiplicacion'){
+			  		var resultado = parseFloat(primerValor) * parseFloat(segundoValor);
+			  	}else{
+			  		var resultado = parseFloat(primerValor) / parseFloat(segundoValor);
+			  	}
+
+		  	}else{
+		  		alert("Ingrese números en los campos");
+		  	}
+		  	//Muestro el resultado
+		    $('#resultado').text(resultado);
+		  });
+		});
+	</script>
+</body>
+</html>
