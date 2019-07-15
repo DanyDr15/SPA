@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 FROM php:7.2-apache
 LABEL maintainer="Andy Miller <rhuk@getgrav.org> (@rhukster)"
 
@@ -68,20 +69,24 @@ FROM node:lts-alpine
 RUN npm install -g http-server
 
 # make the 'app' folder the current working directory
+=======
+# build stage
+FROM node:lts-alpine as build-stage
+>>>>>>> 8400bd9c59545ed58904461fbe70ee738b43b6b0
 WORKDIR /app
-
-# copy both 'package.json' and 'package-lock.json' (if available)
 COPY package*.json ./
-
-# install project dependencies
 RUN npm install
-
-# copy project files and folders to the current working directory (i.e. 'app' folder)
 COPY . .
-
-# build app for production with minification
 RUN npm run build
 
+<<<<<<< HEAD
 EXPOSE 8085
 CMD [ "http-server", "dist" ]
 >>>>>>> 479f2609ad679107f64a72acf9deb11798b15074
+=======
+# production stage
+FROM nginx:stable-alpine as production-stage
+COPY --from=build-stage /app/dist /usr/share/nginx/html
+EXPOSE 8081
+CMD ["nginx", "-g", "daemon off;"]
+>>>>>>> 8400bd9c59545ed58904461fbe70ee738b43b6b0
